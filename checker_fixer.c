@@ -6,7 +6,7 @@
 /*   By: etorun <etorun@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 13:47:41 by etorun            #+#    #+#             */
-/*   Updated: 2025/02/09 13:13:37 by etorun           ###   ########.fr       */
+/*   Updated: 2025/02/13 08:41:00 by etorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ t_stack *ft_checker_fixer(int argc,char **argv)
 	temp = NULL;
 	i = 1;
 	y= 0;
-	index = 1;
+	index = 0;
 	while(i < argc)
 	{
 		split_k = ft_split(argv[i],' ');
@@ -51,7 +51,7 @@ t_stack *ft_checker_fixer(int argc,char **argv)
 	return (temp);	
 }
 
-void ft_duble_checker(t_stack *check_me)
+void ft_double_checker(t_stack *check_me)
 {
 	int keeper;
 	t_stack *temp;

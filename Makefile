@@ -2,8 +2,8 @@ NAME = push_swap
 CC = cc
 CFLAGS = -Wall -Wextra -Werror -g
 LIBFT = libft.a
-SRC =	push_swap.c checker_fixer.c ft_atoix.c \
-ft_error.c ft_stack_funks.c ft_sorter.c \
+SRC =	push_swap.c checker_fixer.c atoix.c \
+error.c stack_funks.c sorter.c swaps.c real_sorter.c\
 
 OBJ = $(SRC:.c=.o)
 

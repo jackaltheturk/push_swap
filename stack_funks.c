@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_stack_funks.c                                   :+:      :+:    :+:   */
+/*   stack_funks.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: etorun <etorun@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 14:49:50 by etorun            #+#    #+#             */
-/*   Updated: 2025/02/09 11:29:13 by etorun           ###   ########.fr       */
+/*   Updated: 2025/02/13 08:41:08 by etorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,7 @@ t_stack *ft_stack_new(int index, int value)
 		return (NULL);
 	new->value = value;
 	new->index = index;
-	new->sorted_index = 0;
 	new->next = NULL;
-	new->prev = NULL;
 	return (new);
 }
 
@@ -38,7 +36,6 @@ void ft_stack_add_back(t_stack **head,t_stack *new)
 	}
 	l_ptr = ft_stack_last(*head);
 	l_ptr -> next = new;
-	new -> prev = l_ptr;
 }
 
 t_stack	*ft_stack_last(t_stack *head)
@@ -51,4 +48,31 @@ t_stack	*ft_stack_last(t_stack *head)
 	while (l_ptr->next != NULL)
 		l_ptr = l_ptr->next;
 	return (l_ptr);
+}
+
+int ft_stack_len(t_stack *head)
+{
+	int i;
+	
+	if (!head)
+		return (0);
+	i=0;
+	while(head -> next)
+	{
+		head = head-> next;
+		i++;
+	}
+	i++;
+	return (i);
+}
+
+t_stack *ft_indexed_node(int index,t_stack *head)
+{
+	while(head)
+	{
+		if(head -> index == index)
+			return head;
+		head = head -> next;
+	}
+	return NULL;
 }
