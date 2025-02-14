@@ -6,7 +6,7 @@
 /*   By: etorun <etorun@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 13:40:48 by etorun            #+#    #+#             */
-/*   Updated: 2025/02/14 17:24:09 by etorun           ###   ########.fr       */
+/*   Updated: 2025/02/14 23:17:41 by etorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,12 @@ int ft_count(int argc,char **argv);
 int *ft_fill(int argc,char **argv,int *as,int count);
 int	ft_checksorted(int *as);
 void ft_double_checker(int *as);
+void ft_sorter(int *as);
+void ft_pb(int *as,int *bs);
+void ft_sorter(int *as);
+void ft_rb(int *bs,int times);
+void ft_rrb(int *bs,int times);
+int ft_calb(int *bs,int number);
+int ft_find_max(int *bs,int max);
+void ft_turn_put(int *as,int *bs,int m_times);
 #endif
