@@ -6,7 +6,7 @@
 /*   By: etorun <etorun@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/12 18:33:06 by etorun            #+#    #+#             */
-/*   Updated: 2025/02/13 09:00:10 by etorun           ###   ########.fr       */
+/*   Updated: 2025/02/13 10:36:43 by etorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ void ft_sorter(t_stack **head)
 	else
 		ft_real_sorter(head, len - 1);
 }
-void ft_enum(t_stack *head)
+int ft_enum(t_stack *head)
 {
 	int i = 0;
 	while(head)
@@ -60,4 +60,5 @@ void ft_enum(t_stack *head)
 		head = head->next;
 		i++;
 	}
+	return (i-1);
 }

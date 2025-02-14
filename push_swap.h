@@ -6,7 +6,7 @@
 /*   By: etorun <etorun@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 13:40:48 by etorun            #+#    #+#             */
-/*   Updated: 2025/02/13 08:58:06 by etorun           ###   ########.fr       */
+/*   Updated: 2025/02/13 12:13:07 by etorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void ft_double_checker(t_stack *check_me);
 int	ft_checksorted(t_stack *stack_a);
 t_stack *ft_indexed_node(int index,t_stack *head);
 void ft_sorter(t_stack **head);
-void ft_enum(t_stack *head);
+int ft_enum(t_stack *head);
 int ft_stack_len(t_stack *head);
 void ft_swap(t_stack **head,int w_stk);
 void ft_sort_trible(t_stack **head, int w_stk);
@@ -42,5 +42,6 @@ void ft_rev(t_stack **head, int w_stk);
 void ft_rrev(t_stack **head, int max_index, int w_stk);
 void ft_push(t_stack **stack_src,t_stack **stack_dst,int to_where);
 void ft_real_sorter(t_stack **head, int max_index);
+void ft_position(t_stack **head,t_stack **stack_b,int max);
 
 #endif
