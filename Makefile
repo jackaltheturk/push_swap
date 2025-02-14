@@ -3,7 +3,7 @@ CC = cc
 CFLAGS = -Wall -Wextra -Werror -g
 LIBFT = libft.a
 SRC =	push_swap.c checker_fixer.c atoix.c \
-error.c stack_funks.c sorter.c swaps.c real_sorter.c\
+error.c check_tools.c\
 
 OBJ = $(SRC:.c=.o)
 
@@ -13,7 +13,7 @@ $(LIBFT):
 	make -C libft/
 
 $(NAME): $(OBJ)
-	$(CC) $(CFLAGS) -g -o $(NAME) $(OBJ) libft/libft.a
+	$(CC) $(CFLAGS) -o $(NAME) $(OBJ) libft/libft.a
 
 clean:
 	rm -f $(OBJ)

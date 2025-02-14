@@ -1,29 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   check_tools.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: etorun <etorun@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/08 13:38:02 by etorun            #+#    #+#             */
-/*   Updated: 2025/02/14 17:53:03 by etorun           ###   ########.fr       */
+/*   Created: 2025/02/14 17:50:19 by etorun            #+#    #+#             */
+/*   Updated: 2025/02/14 17:52:26 by etorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int main(int argc,char **argv)
+void ft_double_checker(int *as)
 {
-	int *as;
+	int i;
+	int y;
 	
-	as= NULL;
-	if (argc < 2 || !argv[1][0])
-		ft_error();
-	as = ft_checker_fixer(argc, argv);
-	ft_double_checker(as);
-	if(ft_checksorted(as))
+	i = 1;
+	y = 1;
+	while(y < as[0])	
+	{	
+		i = y + 1;
+		while(i < as[0] + 1)
 		{
-			free(as);
-			return (0);
+			if(as[y] == as[i])
+				ft_error();
+			i++;
 		}
+		y++;
+	}
+}
+
+int	ft_checksorted(int *as)
+{
+	int i;
+
+	i = 1;
+	while (i < as[0])
+	{
+		if (as[i] > as[i+1])
+			return (0);
+		i++;
+	}
+	return (1);
 }
