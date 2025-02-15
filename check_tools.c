@@ -6,7 +6,7 @@
 /*   By: etorun <etorun@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 17:50:19 by etorun            #+#    #+#             */
-/*   Updated: 2025/02/14 17:52:26 by etorun           ###   ########.fr       */
+/*   Updated: 2025/02/15 18:41:03 by etorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int	ft_checksorted(int *as)
 	i = 1;
 	while (i < as[0])
 	{
-		if (as[i] > as[i+1])
+		if (as[i] < as[i+1])
 			return (0);
 		i++;
 	}

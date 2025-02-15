@@ -6,7 +6,7 @@
 /*   By: etorun <etorun@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 20:49:25 by etorun            #+#    #+#             */
-/*   Updated: 2025/02/14 23:19:51 by etorun           ###   ########.fr       */
+/*   Updated: 2025/02/15 18:55:24 by etorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,20 +40,21 @@ int ft_calb(int *bs,int number)
 		return (bs[0]- min_i);
 }
 
-int ft_find_max(int *bs,int max)
+int ft_find_number(int *bs,int number)
 {
 	int i;
 	
 	i = 1;
 	while(1)
 	{
-		if(bs[i] == max)
+		if(bs[i] == number)
 			break;
 		i++;
 	}
-		if (i <= (bs[0]/2))
+		if (i <= (bs[0] / 2))
 			return (-1 * i);
 		else
-			return (bs[0]- i);
+			return (bs[0]-i);
 	
 }
+

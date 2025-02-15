@@ -6,16 +6,20 @@
 /*   By: etorun <etorun@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 18:50:52 by etorun            #+#    #+#             */
-/*   Updated: 2025/02/14 23:23:55 by etorun           ###   ########.fr       */
+/*   Updated: 2025/02/15 09:17:42 by etorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 #include <stdio.h>
 
-void ft_pb(int *as,int *bs)
+void ft_pb(int *as,int *bs,int min_i)
 {
 	bs[bs[0] + 1] = as[as[0]];
+	if(as[as[0]] <= bs[min_i])
+		bs[min_i] = as[as[0]];
+	if(as[as[0]] >= bs[min_i+1])
+		bs[min_i+1] = as[as[0]];
 	as[0]--;
 	bs[0]++;
 	write(1,"pb\n",3);
@@ -35,7 +39,7 @@ void ft_rb(int *bs,int times)
 			mov--;
 		}
 		bs[1]= temp;
-		write(1,"rb\n",4);
+		write(1,"rb\n",3);
 	}
 }
 void ft_rrb(int *bs,int times)

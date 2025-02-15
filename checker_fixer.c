@@ -6,7 +6,7 @@
 /*   By: etorun <etorun@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 13:47:41 by etorun            #+#    #+#             */
-/*   Updated: 2025/02/14 17:50:37 by etorun           ###   ########.fr       */
+/*   Updated: 2025/02/15 20:34:09 by etorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,22 +52,20 @@ int ft_count(int argc,char **argv)
 {
 	int	i;
 	int y;
-	int index;
 	char **split_k;
 	
 	i = 1;
 	y= 0;
-	index = 1;
-	as = malloc(sizeof(int)*(count+1));
+	as = malloc(sizeof(int)*(count+3));
 	as[0] = count;
 	while(i < argc)
 	{
 		split_k = ft_split(argv[i],' ');
 		while(split_k[y])
 		{
-			as[index] = ft_atoix(split_k[y]);
+			as[count] = ft_atoix(split_k[y]);
 			y++;
-			index++;
+			count--;
 		}
 		ft_free_split(split_k);
 		y = 0;
