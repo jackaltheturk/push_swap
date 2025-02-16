@@ -6,7 +6,7 @@
 /*   By: etorun <etorun@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 18:31:40 by etorun            #+#    #+#             */
-/*   Updated: 2025/02/15 21:23:56 by etorun           ###   ########.fr       */
+/*   Updated: 2025/02/16 21:58:23 by etorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,15 @@
 void ft_turn_put(int *as,int *bs,int m_times,int min_i)
 {
 			if(m_times < 0)
-				ft_rrb(bs, m_times * -1);
+				ft_rrx(bs, m_times * -1, 2);
 			else if(m_times > 0)
-				ft_rb(bs,m_times);
+				ft_rx(bs,m_times,2);
 			ft_pb(as,bs,min_i);
 }
 
 void ft_subsort(int *as,int *bs,int min_i)
 {
-	while(as[0])
+	while(as[0] - 3)
 	{
 		if(as[as[0]] <= bs[min_i] && as[as[0]] >= bs[min_i+1])
 		{
@@ -39,18 +39,21 @@ void ft_subsort(int *as,int *bs,int min_i)
 		else
 			ft_turn_put(as,bs,ft_calb(bs,as[as[0]]),min_i);
 	}
+	ft_triblesort(as, 1);
 }
 void ft_back_tofuture(int*bs,int min_i)
 {
 	int m_times;
 	int total_n;
 	
+	if(bs[0] == 0)
+		return;
 	total_n= bs[0];
 	m_times = ft_find_number(bs,bs[min_i+1]);
 	if(m_times < 0)
-				ft_rrb(bs, (m_times * -1));
+				ft_rrx(bs, (m_times * -1), 2);
 			else if(m_times > 0)
-				ft_rb(bs,m_times);
+				ft_rx(bs,m_times,2);
 	while(total_n--)
 	 	write(1,"pa\n",3);
 }

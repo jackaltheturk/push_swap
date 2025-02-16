@@ -3,7 +3,8 @@ CC = cc
 CFLAGS = -Wall -Wextra -Werror -g
 LIBFT = libft.a
 SRC =	push_swap.c checker_fixer.c atoix.c \
-error.c check_tools.c sorter.c moves.c calculators.c\
+error.c check_tools.c sorter.c moves.c calculators.c \
+triblesort.c
 
 OBJ = $(SRC:.c=.o)
 

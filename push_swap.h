@@ -6,7 +6,7 @@
 /*   By: etorun <etorun@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 13:40:48 by etorun            #+#    #+#             */
-/*   Updated: 2025/02/15 08:23:26 by etorun           ###   ########.fr       */
+/*   Updated: 2025/02/16 20:09:04 by etorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,11 @@ void ft_subsort(int *as,int *bs,int min_i);
 void ft_back_tofuture(int*bs,int min_i);
 void ft_sorter(int *as);
 void ft_pb(int *as,int *bs,int min_i);
-void ft_rb(int *bs,int times);
-void ft_rrb(int *bs,int times);
+void ft_rx(int *xs,int times,int w_one);
+void ft_rrx(int *xs,int times,int w_one);
+void ft_swapx(int *xs,int w_one);
 int ft_calb(int *bs,int number);
 int ft_find_number(int *bs,int number);
 void ft_turn_put(int *as,int *bs,int m_times,int min_i);
+void ft_triblesort(int *xs,int w_one);
 #endif

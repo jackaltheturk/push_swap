@@ -6,7 +6,7 @@
 /*   By: etorun <etorun@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 18:50:52 by etorun            #+#    #+#             */
-/*   Updated: 2025/02/15 09:17:42 by etorun           ###   ########.fr       */
+/*   Updated: 2025/02/16 20:48:22 by etorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,42 +25,62 @@ void ft_pb(int *as,int *bs,int min_i)
 	write(1,"pb\n",3);
 }
 
-void ft_rb(int *bs,int times)
+void ft_rx(int *xs,int times,int w_one)
 {
 	int temp;
 	int mov;
 	while(times--)
 	{
-		mov = bs[0];
-		temp = bs[bs[0]];
+		mov = xs[0];
+		temp = xs[xs[0]];
 		while(mov - 1)
 		{
-			bs[mov] = bs[mov-1];
+			xs[mov] = xs[mov-1];
 			mov--;
 		}
-		bs[1]= temp;
-		write(1,"rb\n",3);
+		xs[1]= temp;
+		if(w_one == 1)
+			write(1,"ra\n",3);
+		else if(w_one == 2)
+			write(1,"rb\n",3);
+		
 	}
 }
-void ft_rrb(int *bs,int times)
+void ft_rrx(int *xs,int times,int w_one)
 {
 	int temp;
 	int mov;
 	int i;
 
 	i = 1;
-	mov = bs[0];
-	temp = bs[1];
+	mov = xs[0];
+	temp = xs[1];
 	while(times--)
 	{	
 		while( i < mov )
 		{
-			bs[i] = bs[i + 1];
+			xs[i] = xs[i + 1];
 			i++;
 		}
-		bs[mov]= temp;
-		write(1,"rrb\n",4);
-		temp = bs[1];
+		xs[mov]= temp;
+		if (w_one ==1)
+			write(1,"rra\n",4);
+		if (w_one ==2)
+			write(1,"rrb\n",4);
+		temp = xs[1];
 		i = 1;
 	}
+}
+void ft_swapx(int *xs,int w_one)
+{
+	int temp;
+
+	temp =xs[3];
+
+	xs[3] = xs[2];
+	xs[2] = temp;
+	if(w_one == 1)
+		write(1,"sa\n",3);
+	else if(w_one == 2)
+		write(1,"sb\n",3);	
 }
