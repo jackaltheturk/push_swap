@@ -6,7 +6,7 @@
 /*   By: etorun <etorun@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 18:31:40 by etorun            #+#    #+#             */
-/*   Updated: 2025/02/18 14:58:08 by etorun           ###   ########.fr       */
+/*   Updated: 2025/02/18 19:59:15 by etorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,19 @@
 void ft_minmax(int *as,int min_i)
 {
 	int max_index;
-
+	
+    as[min_i] = 2147483647;
+	as[min_i+1] = -2147483648;
 	max_index = as[0];
 	while(max_index)
 	{
-		if (as[max_index] < as[min_i])
+		if (as[max_index] <= as[min_i])
 			as[min_i] = as[max_index];
-		else if (as[max_index] > as[min_i+1])
+		if (as[max_index] >= as[min_i+1])
 			as[min_i+1] = as[max_index];
 		max_index--;
 	}
+		printf("min =%d, max=%d",as[min_i],as[min_i +1 ]);
 }
 
 void ft_turn(int *xs,int mci)
@@ -53,7 +56,7 @@ void ft_tp(int *as,int *bs,int m_times,int min_i)
 
 void ft_ss(int *as,int *bs,int min_i)
 {
-	while(as[0])
+	while(as[0] - 3)
 	{
 		if(as[as[0]] <= bs[min_i] && as[as[0]] >= bs[min_i+1])
 		{
@@ -70,7 +73,7 @@ void ft_ss(int *as,int *bs,int min_i)
 		else
 			ft_tp(as,bs,ft_calb(bs,as[as[0]]),min_i);
 	}
-	//ft_triblesort(as, 1);
+	ft_triblesort(as, 1);
 }
 
 void ft_sorter(int *as)
@@ -84,15 +87,7 @@ void ft_sorter(int *as)
 	bs[min_i+1] = -2147483648;
 	bs[0] = 0;
 	ft_ss(as,bs,min_i);
-	//ft_minmax(as,min_i);
+	ft_minmax(as,min_i);
 	//ft_back_tofuture(as,bs,min_i);
-	ft_turn(bs,ft_find_number(bs,bs[min_i+1]));
-	int counter = bs[0];
-		while(counter--)
-		{
-			as[as[0] + 1] = bs[bs[0]];
-			as[0]++;
-			bs[0]--;
-			write(1,"pa\n",3);
-		}
-	}
+	
+}
