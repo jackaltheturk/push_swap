@@ -6,7 +6,7 @@
 /*   By: etorun <etorun@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 19:45:09 by etorun            #+#    #+#             */
-/*   Updated: 2025/02/18 13:20:29 by etorun           ###   ########.fr       */
+/*   Updated: 2025/02/18 18:46:59 by etorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,7 +97,7 @@ int ft_mci(int *as,int *bs,int min_i)
 	while(a > 0)
 	{
 		if(as[a] <= bs[min_i])
-			cost = ft_find_number(bs,bs[bs[0]+2]);
+			cost = ft_find_number(bs,bs[min_i +1]);
 		else
 			cost = ft_calb(bs,as[a]);
 		cost = ft_finalcost(cost,ft_local_cost(as,a));

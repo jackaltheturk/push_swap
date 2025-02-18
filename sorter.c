@@ -6,7 +6,7 @@
 /*   By: etorun <etorun@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 18:31:40 by etorun            #+#    #+#             */
-/*   Updated: 2025/02/18 14:18:08 by etorun           ###   ########.fr       */
+/*   Updated: 2025/02/18 14:58:08 by etorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,9 @@ void ft_turn(int *xs,int mci)
 		else
 			m_times= xs[0] - mci;
 	if(m_times < 0)
-		ft_rrx(xs, m_times * -1, 1);
+		ft_rrx(xs, m_times * -1, 2);
 	else if(m_times > 0)
-		ft_rx(xs,m_times,1);
+		ft_rx(xs,m_times,2);
 	
 }
 void ft_tp(int *as,int *bs,int m_times,int min_i)
@@ -86,4 +86,13 @@ void ft_sorter(int *as)
 	ft_ss(as,bs,min_i);
 	//ft_minmax(as,min_i);
 	//ft_back_tofuture(as,bs,min_i);
-}
+	ft_turn(bs,ft_find_number(bs,bs[min_i+1]));
+	int counter = bs[0];
+		while(counter--)
+		{
+			as[as[0] + 1] = bs[bs[0]];
+			as[0]++;
+			bs[0]--;
+			write(1,"pa\n",3);
+		}
+	}
