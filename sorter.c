@@ -6,14 +6,43 @@
 /*   By: etorun <etorun@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 18:31:40 by etorun            #+#    #+#             */
-/*   Updated: 2025/02/16 21:58:23 by etorun           ###   ########.fr       */
+/*   Updated: 2025/02/18 14:18:08 by etorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 #include <stdio.h>
 
-void ft_turn_put(int *as,int *bs,int m_times,int min_i)
+void ft_minmax(int *as,int min_i)
+{
+	int max_index;
+
+	max_index = as[0];
+	while(max_index)
+	{
+		if (as[max_index] < as[min_i])
+			as[min_i] = as[max_index];
+		else if (as[max_index] > as[min_i+1])
+			as[min_i+1] = as[max_index];
+		max_index--;
+	}
+}
+
+void ft_turn(int *xs,int mci)
+{
+	int m_times;
+	
+	if (mci <= (xs[0] / 2))
+			m_times = 1 * mci;
+		else
+			m_times= xs[0] - mci;
+	if(m_times < 0)
+		ft_rrx(xs, m_times * -1, 1);
+	else if(m_times > 0)
+		ft_rx(xs,m_times,1);
+	
+}
+void ft_tp(int *as,int *bs,int m_times,int min_i)
 {
 			if(m_times < 0)
 				ft_rrx(bs, m_times * -1, 2);
@@ -22,40 +51,26 @@ void ft_turn_put(int *as,int *bs,int m_times,int min_i)
 			ft_pb(as,bs,min_i);
 }
 
-void ft_subsort(int *as,int *bs,int min_i)
+void ft_ss(int *as,int *bs,int min_i)
 {
-	while(as[0] - 3)
+	while(as[0])
 	{
 		if(as[as[0]] <= bs[min_i] && as[as[0]] >= bs[min_i+1])
 		{
+			bs[min_i] = as[as[0]];
+			bs[min_i+1] = as[as[0]];
 			ft_pb(as,bs,min_i);
+			continue;
 		}
-		else if(as[as[0]] <= bs[min_i])
+		ft_cm(as,bs,min_i);
+		if(as[as[0]] <= bs[min_i])
 		{
-			ft_turn_put(as,bs,ft_find_number(bs,bs[min_i+1]),min_i);
+			ft_tp(as,bs,ft_find_number(bs,bs[min_i+1]),min_i);
 		}
-		else if(as[as[0]] > bs[min_i+1])
-			ft_turn_put(as,bs,ft_calb(bs,as[as[0]]),min_i);
 		else
-			ft_turn_put(as,bs,ft_calb(bs,as[as[0]]),min_i);
+			ft_tp(as,bs,ft_calb(bs,as[as[0]]),min_i);
 	}
-	ft_triblesort(as, 1);
-}
-void ft_back_tofuture(int*bs,int min_i)
-{
-	int m_times;
-	int total_n;
-	
-	if(bs[0] == 0)
-		return;
-	total_n= bs[0];
-	m_times = ft_find_number(bs,bs[min_i+1]);
-	if(m_times < 0)
-				ft_rrx(bs, (m_times * -1), 2);
-			else if(m_times > 0)
-				ft_rx(bs,m_times,2);
-	while(total_n--)
-	 	write(1,"pa\n",3);
+	//ft_triblesort(as, 1);
 }
 
 void ft_sorter(int *as)
@@ -68,6 +83,7 @@ void ft_sorter(int *as)
 	bs[min_i] = 2147483647;
 	bs[min_i+1] = -2147483648;
 	bs[0] = 0;
-	ft_subsort(as,bs,min_i);
-	ft_back_tofuture(bs,min_i);
+	ft_ss(as,bs,min_i);
+	//ft_minmax(as,min_i);
+	//ft_back_tofuture(as,bs,min_i);
 }

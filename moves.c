@@ -6,7 +6,7 @@
 /*   By: etorun <etorun@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 18:50:52 by etorun            #+#    #+#             */
-/*   Updated: 2025/02/16 20:48:22 by etorun           ###   ########.fr       */
+/*   Updated: 2025/02/18 13:33:34 by etorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@
 void ft_pb(int *as,int *bs,int min_i)
 {
 	bs[bs[0] + 1] = as[as[0]];
-	if(as[as[0]] <= bs[min_i])
+	if(as[as[0]] < bs[min_i])
 		bs[min_i] = as[as[0]];
-	if(as[as[0]] >= bs[min_i+1])
+	else if(as[as[0]] > bs[min_i+1])
 		bs[min_i+1] = as[as[0]];
 	as[0]--;
 	bs[0]++;
