@@ -6,7 +6,7 @@
 /*   By: etorun <etorun@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 18:31:40 by etorun            #+#    #+#             */
-/*   Updated: 2025/02/19 12:21:12 by etorun           ###   ########.fr       */
+/*   Updated: 2025/02/19 23:34:03 by etorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ void ft_ss(int *as,int *bs,int min_i)
 {
 	while(as[0] - 3)
 	{
-		{
+			printf("%d------%d\n",as[0],bs[0]);
 			if(as[as[0]] <= bs[min_i] && as[as[0]] >= bs[min_i+1])
 			{
 				bs[min_i] = as[as[0]];
@@ -54,12 +54,9 @@ void ft_ss(int *as,int *bs,int min_i)
 			}
 			ft_cm(as,bs,min_i);
 			if(as[as[0]] <= bs[min_i])
-			{
 				ft_tp(as,bs,ft_find_number(bs,bs[min_i+1]),min_i);
-			}
 			else
 				ft_tp(as,bs,ft_calb(bs,as[as[0]]),min_i);
-		}
 	}
 	ft_triblesort(as,1);	
 }
@@ -77,6 +74,5 @@ void ft_sorter(int *as)
 	bs[0] = 0;
 	ft_ss(as,bs,min_i);
 	ft_minmax(as,min_i);
-	ft_back_tofuture(as,bs,min_i);
-	
+	ft_back_tofuture(as,bs,min_i);	
 }

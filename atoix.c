@@ -6,7 +6,7 @@
 /*   By: etorun <etorun@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 14:06:44 by etorun            #+#    #+#             */
-/*   Updated: 2025/02/19 14:25:19 by etorun           ###   ########.fr       */
+/*   Updated: 2025/02/19 23:51:55 by etorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void ft_str_check(const char *str)
 {
-	if(!ft_isdigit(*str) || (ft_strlen(str) > 12))
+	if(!ft_isdigit(*str) || (ft_strlen(str) > 12) || *str == '\0')
 		ft_error();
 }
 
@@ -35,9 +35,9 @@ int	ft_atoix(const char *str)
 	}
 	else if (*str == '+')
 		str++;
+	ft_str_check(str);
 	while (*str)
 	{
-		ft_str_check(str);
 		i = i * 10 + (*str - 48);
 		str++;
 	}
