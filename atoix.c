@@ -1,16 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoix.c                                         :+:      :+:    :+:   */
+/*   atoix.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: etorun <etorun@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 14:06:44 by etorun            #+#    #+#             */
-/*   Updated: 2025/02/08 19:03:21 by etorun           ###   ########.fr       */
+/*   Updated: 2025/02/19 13:38:14 by etorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+void ft_str_check(const char *str)
+{
+	if(!ft_isdigit(*str) || (ft_strlen(str) > 12))
+		ft_error();
+}
 
 int	ft_atoix(const char *str)
 {
@@ -31,8 +37,7 @@ int	ft_atoix(const char *str)
 		str++;
 	while (*str)
 	{
-		if (!(ft_isdigit(*str)))
-			ft_error();
+		ft_str_check(str);
 		i = i * 10 + (*str - 48);
 		str++;
 	}

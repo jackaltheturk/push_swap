@@ -6,7 +6,7 @@
 /*   By: etorun <etorun@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/16 19:31:02 by etorun            #+#    #+#             */
-/*   Updated: 2025/02/18 09:42:58 by etorun           ###   ########.fr       */
+/*   Updated: 2025/02/19 12:30:54 by etorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,19 +49,19 @@ void ft_triblesort(int *xs,int w_one)
 }
 */
 
-/*
+
 void ft_pa(int *as,int *bs,int min_i)
 {
-	bs[bs[0] + 1] = as[as[0]];
-	if(as[as[0]] <= bs[min_i])
-		bs[min_i] = as[as[0]];
-	if(as[as[0]] >= bs[min_i+1])
-		bs[min_i+1] = as[as[0]];
-	as[0]--;
-	bs[0]++;
-	write(1,"pb\n",3);
+	as[as[0] + 1] = bs[bs[0]];
+	if(bs[bs[0]] <= as[min_i])
+		as[min_i] = bs[bs[0]];
+	if(bs[bs[0]] >= as[min_i+1])
+		as[min_i+1] = bs[bs[0]];
+	bs[0]--;
+	as[0]++;
+	write(1,"pa\n",3);
 }
-*/
+
 void ft_rrr_maker(int *xs,int times)
 {
 	int temp;
