@@ -6,7 +6,7 @@
 /*   By: etorun <etorun@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 13:40:48 by etorun            #+#    #+#             */
-/*   Updated: 2025/02/19 13:38:25 by etorun           ###   ########.fr       */
+/*   Updated: 2025/02/19 20:15:11 by etorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ void ft_triblesort(int *xs,int w_one);
 int ft_local_cost(int *as,int index);
 void ft_minmax(int *as,int min_i);
 void ft_pa(int *as,int *bs,int min_i);
+void ft_perfecter(int *xs,int m_times,int w_one);
 void ft_cm(int *as,int *bs,int min_i);
 void ft_rr(int *as,int*bs,int a,int b);
 void ft_rrr(int *as,int*bs,int a,int b);

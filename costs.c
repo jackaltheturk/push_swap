@@ -6,7 +6,7 @@
 /*   By: etorun <etorun@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 19:45:09 by etorun            #+#    #+#             */
-/*   Updated: 2025/02/19 14:39:29 by etorun           ###   ########.fr       */
+/*   Updated: 2025/02/19 20:18:13 by etorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,15 @@ int ft_finalcost(int a,int b)
 			return (b*-1) +a;	
 }
 
+void ft_perfecter(int *xs,int m_times,int w_one)
+{
+	if(m_times < 0)
+		ft_rrx(xs, m_times * -1, w_one);
+	else if(m_times > 0)
+		ft_rx(xs,m_times,w_one);
+}
+
+
 void ft_cm(int *as,int *bs,int min_i)
 {
 	int min_c_index;
@@ -82,7 +91,11 @@ void ft_cm(int *as,int *bs,int min_i)
 		ft_rr(as, bs,cost_a,cost_b);
 	else if(cost_a <= 0 && cost_b <= 0)
 		ft_rrr(as,bs,cost_a,cost_b);
-	
+	else
+	{
+		ft_perfecter(as,cost_a,1);
+		ft_perfecter(bs,cost_b,2);
+	}
 }
 int ft_mci(int *as,int *bs,int min_i)
 {
