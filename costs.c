@@ -6,7 +6,7 @@
 /*   By: etorun <etorun@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 19:45:09 by etorun            #+#    #+#             */
-/*   Updated: 2025/02/18 18:46:59 by etorun           ###   ########.fr       */
+/*   Updated: 2025/02/19 14:39:29 by etorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ void ft_cm(int *as,int *bs,int min_i)
 	
 	min_c_index = ft_mci(as,bs,min_i);
 	if(as[min_c_index] <= bs[min_i])
-		cost_b = ft_find_number(bs,bs[bs[min_i+1]]);
+		cost_b = ft_find_number(bs,bs[min_i+1]);
 	else
 		cost_b = ft_calb(bs,as[min_c_index]);
 	cost_a = ft_local_cost(as,min_c_index);
