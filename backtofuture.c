@@ -6,7 +6,7 @@
 /*   By: etorun <etorun@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 19:08:08 by etorun            #+#    #+#             */
-/*   Updated: 2025/02/20 15:55:42 by etorun           ###   ########.fr       */
+/*   Updated: 2025/02/20 17:52:02 by etorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,7 +110,7 @@ int ft_cala(int *as,int number)
 	}
 	if (big_i == (as[0]/2) && as[0]%2 == 0)
 		return (as[0]- big_i);
-	if (big_i < (as[0]/2))
+	else if (big_i <= (as[0]/2))
 		return (-1 * big_i);
 	else
 		return (as[0]- big_i);
