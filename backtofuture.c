@@ -6,11 +6,12 @@
 /*   By: etorun <etorun@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 19:08:08 by etorun            #+#    #+#             */
-/*   Updated: 2025/02/20 11:01:37 by etorun           ###   ########.fr       */
+/*   Updated: 2025/02/20 15:55:42 by etorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+#include <stdio.h>
 
 void ft_back_tofuture(int *as, int *bs,int min_i)
 {
@@ -42,6 +43,7 @@ void ft_turn(int *xs,int mci,int w_one)
 int ft_checker2(int *as,int min_i)
 {
 	int count = as[0];  //fazla fonksiyon***************************
+	ft_minmax(as,min_i);
 
 	while(count-1)
 	{
@@ -51,12 +53,13 @@ int ft_checker2(int *as,int min_i)
 				continue;}
 		else
 		{
-			ft_minmax(as,min_i);
 			if((as[min_i] != as[count-1]) || (as[min_i+1] != as[count]))
 				return 0;
 		}
 	count--;
 	}
+			//printf("****************************SOrTED");
+			//exit(0);
 	return 1;	
 }
 void ft_medcalculator(int *as,int min_i)
