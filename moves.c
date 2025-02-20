@@ -6,11 +6,12 @@
 /*   By: etorun <etorun@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 18:50:52 by etorun            #+#    #+#             */
-/*   Updated: 2025/02/20 22:22:51 by etorun           ###   ########.fr       */
+/*   Updated: 2025/02/20 23:11:05 by etorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+#include <unistd.h>
 
 void	ft_pb(int *as, int *bs, int min_i)
 {

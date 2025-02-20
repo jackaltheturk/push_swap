@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: etorun <etorun@student.42.fr>              +#+  +:+       +#+        */
+/*   By: etorun <etorun@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 17:13:49 by etorun            #+#    #+#             */
-/*   Updated: 2024/10/11 19:32:14 by etorun           ###   ########.fr       */
+/*   Updated: 2025/02/20 23:26:33 by etorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <unistd.h>
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {

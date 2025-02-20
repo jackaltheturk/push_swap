@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: etorun <etorun@student.42.fr>              +#+  +:+       +#+        */
+/*   By: etorun <etorun@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 19:19:25 by etorun            #+#    #+#             */
-/*   Updated: 2024/10/11 14:18:49 by etorun           ###   ########.fr       */
+/*   Updated: 2025/02/20 23:26:15 by etorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <unistd.h>
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {

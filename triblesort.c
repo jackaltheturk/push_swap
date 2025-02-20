@@ -6,11 +6,12 @@
 /*   By: etorun <etorun@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/16 19:31:02 by etorun            #+#    #+#             */
-/*   Updated: 2025/02/20 22:24:40 by etorun           ###   ########.fr       */
+/*   Updated: 2025/02/20 23:11:34 by etorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+#include <unistd.h>
 
 void	ft_triblesort(int *xs, int w_one)
 {

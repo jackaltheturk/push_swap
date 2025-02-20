@@ -6,11 +6,13 @@
 /*   By: etorun <etorun@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 13:38:02 by etorun            #+#    #+#             */
-/*   Updated: 2025/02/20 21:24:38 by etorun           ###   ########.fr       */
+/*   Updated: 2025/02/20 23:06:31 by etorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+#include <stdlib.h>
+#include <unistd.h>
 
 int	main(int argc, char **argv)
 {

@@ -6,14 +6,12 @@
 /*   By: etorun <etorun@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 13:40:48 by etorun            #+#    #+#             */
-/*   Updated: 2025/02/20 22:51:41 by etorun           ###   ########.fr       */
+/*   Updated: 2025/02/20 23:02:59 by etorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
-
-# include "libft/libft.h"
 
 void	ft_str_check(const char *str);
 int		ft_atoix(const char *str);

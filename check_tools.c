@@ -6,25 +6,25 @@
 /*   By: etorun <etorun@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 17:50:19 by etorun            #+#    #+#             */
-/*   Updated: 2025/02/15 18:41:03 by etorun           ###   ########.fr       */
+/*   Updated: 2025/02/20 23:14:16 by etorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void ft_double_checker(int *as)
+void	ft_double_checker(int *as)
 {
-	int i;
-	int y;
-	
+	int	i;
+	int	y;
+
 	i = 1;
 	y = 1;
-	while(y < as[0])	
-	{	
+	while (y < as[0])
+	{
 		i = y + 1;
-		while(i < as[0] + 1)
+		while (i < as[0] + 1)
 		{
-			if(as[y] == as[i])
+			if (as[y] == as[i])
 				ft_error();
 			i++;
 		}
@@ -34,12 +34,12 @@ void ft_double_checker(int *as)
 
 int	ft_checksorted(int *as)
 {
-	int i;
+	int	i;
 
 	i = 1;
 	while (i < as[0])
 	{
-		if (as[i] < as[i+1])
+		if (as[i] < as[i + 1])
 			return (0);
 		i++;
 	}

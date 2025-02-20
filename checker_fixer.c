@@ -6,11 +6,13 @@
 /*   By: etorun <etorun@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 13:47:41 by etorun            #+#    #+#             */
-/*   Updated: 2025/02/20 22:06:44 by etorun           ###   ########.fr       */
+/*   Updated: 2025/02/20 23:08:58 by etorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft/libft.h"
 #include "push_swap.h"
+#include <stdlib.h>
 
 void	ft_free_split(char **split_k)
 {
