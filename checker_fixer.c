@@ -6,36 +6,39 @@
 /*   By: etorun <etorun@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 13:47:41 by etorun            #+#    #+#             */
-/*   Updated: 2025/02/19 09:55:46 by etorun           ###   ########.fr       */
+/*   Updated: 2025/02/20 22:06:44 by etorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void ft_free_split(char **split_k) 
-{
-    int i = 0;
-    while (split_k[i]) {
-        free(split_k[i]);
-        i++;
-    }
-    free(split_k);
-}
-
-int ft_count(int argc,char **argv)
+void	ft_free_split(char **split_k)
 {
 	int	i;
-	int y;
-	int count;
-	char **split_k;
-	
-	i = 1;
-	y= 0;
-	count = 0;
-	while(i < argc)
+
+	i = 0;
+	while (split_k[i])
 	{
-		split_k = ft_split(argv[i],' ');
-		while(split_k[y])
+		free(split_k[i]);
+		i++;
+	}
+	free(split_k);
+}
+
+int	ft_count(int argc, char **argv)
+{
+	int		i;
+	int		y;
+	int		count;
+	char	**split_k;
+
+	i = 1;
+	y = 0;
+	count = 0;
+	while (i < argc)
+	{
+		split_k = ft_split(argv[i], ' ');
+		while (split_k[y])
 		{
 			ft_atoix(split_k[y]);
 			y++;
@@ -48,20 +51,20 @@ int ft_count(int argc,char **argv)
 	return (count);
 }
 
-	int *ft_fill(int argc,char **argv,int *as,int count)
+int	*ft_fill(int argc, char **argv, int *as, int count)
 {
-	int	i;
-	int y;
-	char **split_k;
-	
+	int		i;
+	int		y;
+	char	**split_k;
+
 	i = 1;
-	y= 0;
-	as = malloc(sizeof(int)*(count+4));
+	y = 0;
+	as = malloc(sizeof(int) * (count + 3));
 	as[0] = count;
-	while(i < argc)
+	while (i < argc)
 	{
-		split_k = ft_split(argv[i],' ');
-		while(split_k[y])
+		split_k = ft_split(argv[i], ' ');
+		while (split_k[y])
 		{
 			as[count] = ft_atoix(split_k[y]);
 			y++;
@@ -74,15 +77,14 @@ int ft_count(int argc,char **argv)
 	return (as);
 }
 
-
-int  *ft_checker_fixer(int argc,char **argv)
+int	*ft_checker_fixer(int argc, char **argv)
 {
-	int count;
-	int *as;
+	int	count;
+	int	*as;
 
 	as = NULL;
-	count = ft_count(argc,argv);
-	return (ft_fill(argc,argv,as,count));
+	count = ft_count(argc, argv);
+	return (ft_fill(argc, argv, as, count));
 }
 
 

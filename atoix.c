@@ -6,15 +6,15 @@
 /*   By: etorun <etorun@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 14:06:44 by etorun            #+#    #+#             */
-/*   Updated: 2025/02/19 23:51:55 by etorun           ###   ########.fr       */
+/*   Updated: 2025/02/20 22:13:15 by etorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void ft_str_check(const char *str)
+void	ft_str_check(const char *str)
 {
-	if(!ft_isdigit(*str) || (ft_strlen(str) > 12) || *str == '\0')
+	if (!ft_isdigit(*str) || (ft_strlen(str) > 12) || *str == '\0')
 		ft_error();
 }
 
