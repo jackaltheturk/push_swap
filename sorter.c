@@ -6,7 +6,7 @@
 /*   By: etorun <etorun@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 18:31:40 by etorun            #+#    #+#             */
-/*   Updated: 2025/02/19 23:34:03 by etorun           ###   ########.fr       */
+/*   Updated: 2025/02/20 01:58:54 by etorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,6 @@ void ft_ss(int *as,int *bs,int min_i)
 {
 	while(as[0] - 3)
 	{
-			printf("%d------%d\n",as[0],bs[0]);
 			if(as[as[0]] <= bs[min_i] && as[as[0]] >= bs[min_i+1])
 			{
 				bs[min_i] = as[as[0]];

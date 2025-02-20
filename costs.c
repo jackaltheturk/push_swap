@@ -6,7 +6,7 @@
 /*   By: etorun <etorun@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 19:45:09 by etorun            #+#    #+#             */
-/*   Updated: 2025/02/19 20:18:13 by etorun           ###   ########.fr       */
+/*   Updated: 2025/02/20 09:54:30 by etorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,9 +87,9 @@ void ft_cm(int *as,int *bs,int min_i)
 	else
 		cost_b = ft_calb(bs,as[min_c_index]);
 	cost_a = ft_local_cost(as,min_c_index);
-	if ( cost_a >= 0 && cost_b >= 0)
+	if ( cost_a > 0 && cost_b > 0)
 		ft_rr(as, bs,cost_a,cost_b);
-	else if(cost_a <= 0 && cost_b <= 0)
+	else if(cost_a < 0 && cost_b < 0)
 		ft_rrr(as,bs,cost_a,cost_b);
 	else
 	{

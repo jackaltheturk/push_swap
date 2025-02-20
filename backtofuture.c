@@ -6,7 +6,7 @@
 /*   By: etorun <etorun@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 19:08:08 by etorun            #+#    #+#             */
-/*   Updated: 2025/02/19 22:24:23 by etorun           ###   ########.fr       */
+/*   Updated: 2025/02/20 11:01:37 by etorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,26 +88,26 @@ void ft_medcalculator(int *as,int min_i)
 }
 int ft_cala(int *as,int number)
 {
-	int i;
 	int big_i;
-	int max_in;
+	int counter ;
 	int flag;
 	
 	flag = 0;
-	i = 1;
-	max_in= as[0];
-	while(i <= max_in)
+	counter = as[0];
+	while(counter)
 	{
-		if(as[i] > number && flag==0)
+		if(as[counter] > number && flag==0)
 		{	
-			big_i = i;
+			big_i = counter;
 			flag = 1;
 		}
-		else if(as[i] > number && as[i] < as[big_i])
-			big_i = i;
-		i++;
+		else if(as[counter] > number && as[counter] < as[big_i])
+			big_i = counter;
+		counter--;
 	}
-	if (big_i <= (as[0]/2))
+	if (big_i == (as[0]/2) && as[0]%2 == 0)
+		return (as[0]- big_i);
+	if (big_i < (as[0]/2))
 		return (-1 * big_i);
 	else
 		return (as[0]- big_i);
