@@ -6,7 +6,7 @@
 /*   By: etorun <etorun@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 18:31:40 by etorun            #+#    #+#             */
-/*   Updated: 2025/02/20 15:56:14 by etorun           ###   ########.fr       */
+/*   Updated: 2025/02/20 18:53:31 by etorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,7 @@ void ft_ss(int *as,int *bs,int min_i)
 				ft_pb(as,bs,min_i);
 				continue;
 			}
+			ft_cm(as,bs,min_i);
 			ft_cm(as,bs,min_i);
 			if(as[as[0]] <= bs[min_i])
 				ft_tp(as,bs,ft_find_number(bs,bs[min_i+1]),min_i);
