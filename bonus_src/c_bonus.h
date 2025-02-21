@@ -6,7 +6,7 @@
 /*   By: etorun <etorun@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/21 18:14:57 by etorun            #+#    #+#             */
-/*   Updated: 2025/02/21 18:28:09 by etorun           ###   ########.fr       */
+/*   Updated: 2025/02/21 20:07:56 by etorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ int		*ft_checker_fixer(int argc, char **argv);
 int		ft_checksorted(int *as);
 void	ft_double_checker(int *as);
 void	ft_error(void);
+char	*get_next_line(int fd);
+void	ft_sure(int *as);
 /*
 void	ft_ss(int *as, int *bs, int min_i);
 void	ft_back_tofuture(int *as, int*bs, int min_i);
