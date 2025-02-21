@@ -6,7 +6,7 @@
 /*   By: etorun <etorun@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 14:06:44 by etorun            #+#    #+#             */
-/*   Updated: 2025/02/21 21:06:54 by etorun           ###   ########.fr       */
+/*   Updated: 2025/02/21 21:50:08 by etorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,12 @@ int	ft_atoix(const char *str)
 	while (*str == ' ' || *str == '\t' || *str == '\n' || *str == '\f'
 		|| *str == '\v' || *str == '\r')
 		str++;
-	if (*str == '-')
+	if (*str == '-' && *(str + 1) != '\0')
 	{
 		mod = -1;
 		str++;
 	}
-	else if (*str == '+')
+	else if (*str == '+' && *(str + 1) != '\0')
 		str++;
 	while (*str)
 	{
