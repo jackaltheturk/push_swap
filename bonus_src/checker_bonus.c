@@ -6,7 +6,7 @@
 /*   By: etorun <etorun@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/21 18:12:18 by etorun            #+#    #+#             */
-/*   Updated: 2025/02/21 20:08:08 by etorun           ###   ########.fr       */
+/*   Updated: 2025/02/22 20:23:05 by etorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,4 @@ int	main(int argc, char **argv)
 		return (0);
 	}
 	ft_sure(as);
-	
 }

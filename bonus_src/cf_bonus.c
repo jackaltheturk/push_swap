@@ -6,7 +6,7 @@
 /*   By: etorun <etorun@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/21 18:22:19 by etorun            #+#    #+#             */
-/*   Updated: 2025/02/22 14:42:31 by etorun           ###   ########.fr       */
+/*   Updated: 2025/02/22 20:40:35 by etorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int	ft_count(int argc, char **argv)
 		split_k = ft_split(argv[i], ' ');
 		while (split_k[y])
 		{
-			ft_atoix(split_k[y]);
+			ft_atoix(split_k[y], split_k);
 			y++;
 			count++;
 		}
@@ -68,7 +68,7 @@ int	*ft_fill(int argc, char **argv, int *as, int count)
 		split_k = ft_split(argv[i], ' ');
 		while (split_k[y])
 		{
-			as[count] = ft_atoix(split_k[y]);
+			as[count] = ft_atoix(split_k[y], split_k);
 			y++;
 			count--;
 		}
@@ -88,5 +88,3 @@ int	*ft_checker_fixer(int argc, char **argv)
 	count = ft_count(argc, argv);
 	return (ft_fill(argc, argv, as, count));
 }
-
-

@@ -6,7 +6,7 @@
 /*   By: etorun <etorun@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 20:49:25 by etorun            #+#    #+#             */
-/*   Updated: 2025/02/20 23:37:40 by etorun           ###   ########.fr       */
+/*   Updated: 2025/02/22 20:16:06 by etorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,4 +67,3 @@ int	ft_local_cost(int *xs, int index)
 	else
 		return (xs[0] - index);
 }
-

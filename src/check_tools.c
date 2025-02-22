@@ -6,11 +6,12 @@
 /*   By: etorun <etorun@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 17:50:19 by etorun            #+#    #+#             */
-/*   Updated: 2025/02/20 23:14:16 by etorun           ###   ########.fr       */
+/*   Updated: 2025/02/22 20:15:07 by etorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+#include <stdlib.h>
 
 void	ft_double_checker(int *as)
 {
@@ -25,7 +26,10 @@ void	ft_double_checker(int *as)
 		while (i < as[0] + 1)
 		{
 			if (as[y] == as[i])
+			{
+				free(as);
 				ft_error();
+			}
 			i++;
 		}
 		y++;

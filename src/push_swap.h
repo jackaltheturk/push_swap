@@ -6,15 +6,16 @@
 /*   By: etorun <etorun@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 13:40:48 by etorun            #+#    #+#             */
-/*   Updated: 2025/02/22 15:42:09 by etorun           ###   ########.fr       */
+/*   Updated: 2025/02/22 20:14:09 by etorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-void	ft_str_check(const char *str);
-int		ft_atoix(const char *str);
+void	ft_str_check(const char *str, char **strhead);
+void	ft_errortoi(char **strhead);
+int		ft_atoix(const char *str, char **strhead);
 void	ft_error(void);
 int		*ft_checker_fixer(int argc, char **argv);
 void	ft_free_split(char **split_k);

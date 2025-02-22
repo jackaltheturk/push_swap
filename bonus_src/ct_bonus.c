@@ -6,7 +6,7 @@
 /*   By: etorun <etorun@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 17:50:19 by etorun            #+#    #+#             */
-/*   Updated: 2025/02/21 19:25:01 by etorun           ###   ########.fr       */
+/*   Updated: 2025/02/22 20:41:16 by etorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,10 @@ void	ft_double_checker(int *as)
 		while (i < as[0] + 1)
 		{
 			if (as[y] == as[i])
+			{
+				free(as);
 				ft_error();
+			}
 			i++;
 		}
 		y++;
@@ -47,9 +50,9 @@ int	ft_checksorted(int *as)
 	}
 	return (1);
 }
+
 void	ft_error(void)
 {
 	write (2, "Error\n", 6);
 	exit(1);
 }
-
