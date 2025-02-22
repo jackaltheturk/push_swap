@@ -6,7 +6,7 @@
 /*   By: etorun <etorun@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/22 11:38:21 by etorun            #+#    #+#             */
-/*   Updated: 2025/02/22 23:20:05 by etorun           ###   ########.fr       */
+/*   Updated: 2025/02/22 23:35:34 by etorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ void	ft_sx(int *xs, int *fs)
 
 void	ft_px(int *ss, int *ds, int max)
 {
-	if (ds[0] != max)
+	if (ds[0] != max && ss[0] != 0)
 		ds[ds[0] + 1] = ss[ss[0]];
 	else
 	{
