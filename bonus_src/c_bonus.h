@@ -6,7 +6,7 @@
 /*   By: etorun <etorun@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/21 18:14:57 by etorun            #+#    #+#             */
-/*   Updated: 2025/02/22 20:49:32 by etorun           ###   ########.fr       */
+/*   Updated: 2025/02/22 23:20:35 by etorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,8 @@ void	ft_really(int *as, int *bs);
 void	ft_sure(int *as);
 void	ft_dhandler(int *as, int *bs, const char *cur, int max);
 void	ft_thandler(int *as, int *bs, const char *cur);
-void	ft_rrx(int *xs);
-void	ft_rx(int *xs);
+void	ft_rrx(int *xs, int *fs);
+void	ft_rx(int *xs, int *fs);
 void	ft_sx(int *xs, int *fs);
 void	ft_px(int *ss, int *ds, int max);
 #endif

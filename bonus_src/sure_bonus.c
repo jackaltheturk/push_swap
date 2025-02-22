@@ -6,7 +6,7 @@
 /*   By: etorun <etorun@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/21 20:03:29 by etorun            #+#    #+#             */
-/*   Updated: 2025/02/22 20:48:52 by etorun           ###   ########.fr       */
+/*   Updated: 2025/02/22 23:21:30 by etorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,13 @@ void	ft_thandler(int *as, int *bs, const char *cur)
 {
 	if (!ft_strncmp("rrr\n", cur, 4))
 	{
-		ft_rrx(as);
-		ft_rrx(bs);
+		ft_rrx(as, bs);
+		ft_rrx(bs, as);
 	}
 	else if (!ft_strncmp("rra\n", cur, 4))
-		ft_rrx(as);
+		ft_rrx(as, bs);
 	else if (!ft_strncmp("rrb\n", cur, 4))
-		ft_rrx(bs);
+		ft_rrx(bs, as);
 	else
 		ft_error();
 }
@@ -33,13 +33,13 @@ void	ft_dhandler(int *as, int *bs, const char *cur, int max)
 {
 	if (!ft_strncmp("rr\n", cur, 3))
 	{
-		ft_rx(as);
-		ft_rx(bs);
+		ft_rx(as, bs);
+		ft_rx(bs, as);
 	}
 	else if (!ft_strncmp("ra\n", cur, 3))
-		ft_rx(as);
+		ft_rx(as, bs);
 	else if (!ft_strncmp("rb\n", cur, 3))
-		ft_rx(bs);
+		ft_rx(bs, as);
 	else if (!ft_strncmp("ss\n", cur, 3))
 	{
 		ft_sx(as, bs);
@@ -81,11 +81,13 @@ void	ft_really(int *as, int *bs)
 void	ft_sure(int *as)
 {
 	int			*bs;
+	int			total;
 
+	total = as[0];
 	bs = malloc(sizeof(int) * (as[0] + 1));
 	bs[0] = 0;
 	ft_really(as, bs);
-	if (ft_checksorted(as))
+	if (ft_checksorted(as) && as[0] == total)
 		write (1, "OK\n", 3);
 	else
 		write (1, "KO\n", 3);

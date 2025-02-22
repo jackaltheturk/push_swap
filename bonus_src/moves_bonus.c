@@ -6,19 +6,26 @@
 /*   By: etorun <etorun@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/22 11:38:21 by etorun            #+#    #+#             */
-/*   Updated: 2025/02/22 20:36:31 by etorun           ###   ########.fr       */
+/*   Updated: 2025/02/22 23:20:05 by etorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <unistd.h>
 
-void	ft_rrx(int *xs)
+void	ft_rrx(int *xs, int *fs)
 {
 	int	temp;
 	int	mov;
 	int	i;
 
+	if (!(xs[0] >= 2))
+	{
+		free(xs);
+		free(fs);
+		write(1, "KO\n", 3);
+		exit(1);
+	}
 	i = 1;
 	mov = xs[0];
 	temp = xs[1];
@@ -30,11 +37,18 @@ void	ft_rrx(int *xs)
 	xs[mov] = temp;
 }
 
-void	ft_rx(int *xs)
+void	ft_rx(int *xs, int *fs)
 {
 	int	temp;
 	int	mov;
 
+	if (!(xs[0] >= 2))
+	{
+		free(xs);
+		free(fs);
+		write(1, "KO\n", 3);
+		exit(1);
+	}
 	mov = xs[0];
 	temp = xs[xs[0]];
 	while (mov - 1)
