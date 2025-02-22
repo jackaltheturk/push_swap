@@ -6,7 +6,7 @@
 /*   By: etorun <etorun@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 13:40:48 by etorun            #+#    #+#             */
-/*   Updated: 2025/02/20 23:02:59 by etorun           ###   ########.fr       */
+/*   Updated: 2025/02/22 15:42:09 by etorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	ft_sorter(int *as);
 void	ft_pb(int *as, int *bs, int min_i);
 void	ft_rx(int *xs, int times, int w_one);
 void	ft_rrx(int *xs, int times, int w_one);
-void	ft_swapx(int *xs, int w_one);
+void	ft_sa(int *xs);
 int		ft_calb(int *xs, int number);
 int		ft_find_number(int *xs, int number);
 void	ft_turn(int *xs, int mci, int w_one);

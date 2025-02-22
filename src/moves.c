@@ -6,7 +6,7 @@
 /*   By: etorun <etorun@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 18:50:52 by etorun            #+#    #+#             */
-/*   Updated: 2025/02/20 23:11:05 by etorun           ###   ########.fr       */
+/*   Updated: 2025/02/22 15:41:47 by etorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,15 +85,12 @@ void	ft_rrx(int *xs, int times, int w_one)
 	}
 }
 
-void	ft_swapx(int *xs, int w_one)
+void	ft_sa(int *as)
 {
 	int	temp;
 
-	temp = xs[3];
-	xs[3] = xs[2];
-	xs[2] = temp;
-	if (w_one == 1)
-		write (1, "sa\n", 3);
-	else if (w_one == 2)
-		write (1, "sb\n", 3);
+	temp = as[3];
+	as[3] = as[2];
+	as[2] = temp;
+	write (1, "sa\n", 3);
 }

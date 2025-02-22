@@ -6,9 +6,12 @@
 /*   By: etorun <etorun@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/22 11:38:21 by etorun            #+#    #+#             */
-/*   Updated: 2025/02/22 12:19:13 by etorun           ###   ########.fr       */
+/*   Updated: 2025/02/22 15:53:15 by etorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stdlib.h>
+#include <unistd.h>
 
 void	ft_rrx(int *xs)
 {
@@ -44,15 +47,26 @@ void	ft_rx(int *xs)
 void	ft_sx(int *xs)
 {
 	int	temp;
-
-	temp = xs[3];
-	xs[3] = xs[2];
-	xs[2] = temp;
+	
+	if(!(xs[0] >= 2))
+	{
+		write(1, "KO\n", 3);		
+		exit(1);
+	}
+	temp = xs[xs[0]];
+	xs[xs[0]] = xs[xs[0] - 1];
+	xs[xs[0] - 1 ] = temp;
 }
 
-void	ft_px(int *ss, int *ds)
+void	ft_px(int *ss, int *ds,int max)
 {
-	ds[ds[0] + 1] = ss[ss[0]];
+	if (ds[0] != max)
+		ds[ds[0] + 1] = ss[ss[0]];
+	else
+	{
+		write(1,"MAX GECİLDİ\n",13);
+		exit(1);
+	}	
 	ss[0]--;
 	ds[0]++;
 }

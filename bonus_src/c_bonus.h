@@ -6,7 +6,7 @@
 /*   By: etorun <etorun@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/21 18:14:57 by etorun            #+#    #+#             */
-/*   Updated: 2025/02/22 12:12:43 by etorun           ###   ########.fr       */
+/*   Updated: 2025/02/22 15:31:34 by etorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,12 @@ void	ft_double_checker(int *as);
 void	ft_error(void);
 char	*get_next_line(int fd);
 void	ft_sure(int *as);
-void	ft_dhandler(int *as, int *bs, const char *cur);
+void	ft_dhandler(int *as, int *bs, const char *cur,int max);
 void	ft_thandler(int *as, int *bs, const char *cur);
 void	ft_rrx(int *xs);
 void	ft_rx(int *xs);
 void	ft_sx(int *xs);
-void	ft_px(int *ss, int *ds);
+void	ft_px(int *ss, int *ds,int max);
 /*
 void	ft_ss(int *as, int *bs, int min_i);
 void	ft_back_tofuture(int *as, int*bs, int min_i);
