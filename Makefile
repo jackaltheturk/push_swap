@@ -11,7 +11,7 @@ src/backtofuture.c src/costs.c
 BONUS_SRC = bonus_src/checker_bonus.c bonus_src/atoix_bonus.c \
 bonus_src/cf_bonus.c bonus_src/ct_bonus.c \
 bonus_src/gnl_bonus.c bonus_src/gnl_utils_bonus.c \
-bonus_src/sure_bonus.c
+bonus_src/sure_bonus.c bonus_src/moves_bonus.c \
 
 OBJ = $(SRC:.c=.o)
 BONUS_OBJ = ${BONUS_SRC:.c=.o}

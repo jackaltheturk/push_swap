@@ -6,7 +6,7 @@
 /*   By: etorun <etorun@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/21 18:14:57 by etorun            #+#    #+#             */
-/*   Updated: 2025/02/21 20:07:56 by etorun           ###   ########.fr       */
+/*   Updated: 2025/02/22 12:12:43 by etorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,12 @@ void	ft_double_checker(int *as);
 void	ft_error(void);
 char	*get_next_line(int fd);
 void	ft_sure(int *as);
+void	ft_dhandler(int *as, int *bs, const char *cur);
+void	ft_thandler(int *as, int *bs, const char *cur);
+void	ft_rrx(int *xs);
+void	ft_rx(int *xs);
+void	ft_sx(int *xs);
+void	ft_px(int *ss, int *ds);
 /*
 void	ft_ss(int *as, int *bs, int min_i);
 void	ft_back_tofuture(int *as, int*bs, int min_i);
@@ -31,9 +37,6 @@ int		ft_finalcost(int a, int b);
 int		ft_mci(int *as, int *bs, int min_i);
 void	ft_sorter(int *as);
 void	ft_pb(int *as, int *bs, int min_i);
-void	ft_rx(int *xs, int times, int w_one);
-void	ft_rrx(int *xs, int times, int w_one);
-void	ft_swapx(int *xs, int w_one);
 int		ft_calb(int *xs, int number);
 int		ft_find_number(int *xs, int number);
 void	ft_turn(int *xs, int mci, int w_one);
