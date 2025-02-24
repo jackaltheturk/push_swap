@@ -6,25 +6,23 @@
 /*   By: etorun <etorun@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/22 11:38:21 by etorun            #+#    #+#             */
-/*   Updated: 2025/02/22 23:35:34 by etorun           ###   ########.fr       */
+/*   Updated: 2025/02/24 17:00:23 by etorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <unistd.h>
 
-void	ft_rrx(int *xs, int *fs)
+void	ft_rrx(int *xs, int fail)
 {
 	int	temp;
 	int	mov;
 	int	i;
 
-	if (!(xs[0] >= 2))
+	if (xs[0] < 2)
 	{
-		free(xs);
-		free(fs);
-		write(1, "KO\n", 3);
-		exit(1);
+		xs[fail] = 1;
+		return ;
 	}
 	i = 1;
 	mov = xs[0];
@@ -37,17 +35,15 @@ void	ft_rrx(int *xs, int *fs)
 	xs[mov] = temp;
 }
 
-void	ft_rx(int *xs, int *fs)
+void	ft_rx(int *xs, int fail)
 {
 	int	temp;
 	int	mov;
 
-	if (!(xs[0] >= 2))
+	if (xs[0] < 2)
 	{
-		free(xs);
-		free(fs);
-		write(1, "KO\n", 3);
-		exit(1);
+		xs[fail] = 1;
+		return ;
 	}
 	mov = xs[0];
 	temp = xs[xs[0]];
@@ -59,32 +55,28 @@ void	ft_rx(int *xs, int *fs)
 	xs[1] = temp;
 }
 
-void	ft_sx(int *xs, int *fs)
+void	ft_sx(int *xs, int fail)
 {
 	int	temp;
 
-	if (!(xs[0] >= 2))
+	if (xs[0] < 2)
 	{
-		free(xs);
-		free(fs);
-		write(1, "KO\n", 3);
-		exit(1);
+		xs[fail] = 1;
+		return ;
 	}
 	temp = xs[xs[0]];
 	xs[xs[0]] = xs[xs[0] - 1];
 	xs[xs[0] - 1] = temp;
 }
 
-void	ft_px(int *ss, int *ds, int max)
+void	ft_px(int *ss, int *ds, int fail)
 {
-	if (ds[0] != max && ss[0] != 0)
+	if (ds[0] != fail - 1 && ss[0] != 0)
 		ds[ds[0] + 1] = ss[ss[0]];
 	else
 	{
-		write(1, "KO\n", 6);
-		free(ss);
-		free(ds);
-		exit(1);
+		ss[fail] = 1;
+		return ;
 	}
 	ss[0]--;
 	ds[0]++;

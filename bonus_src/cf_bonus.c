@@ -6,7 +6,7 @@
 /*   By: etorun <etorun@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/21 18:22:19 by etorun            #+#    #+#             */
-/*   Updated: 2025/02/22 20:40:35 by etorun           ###   ########.fr       */
+/*   Updated: 2025/02/24 15:13:19 by etorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ int	*ft_fill(int argc, char **argv, int *as, int count)
 
 	i = 1;
 	y = 0;
-	as = malloc(sizeof(int) * (count + 1));
+	as = malloc(sizeof(int) * (count + 2));
 	as[0] = count;
 	while (i < argc)
 	{

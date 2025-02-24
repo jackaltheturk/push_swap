@@ -6,7 +6,7 @@
 /*   By: etorun <etorun@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/21 18:14:57 by etorun            #+#    #+#             */
-/*   Updated: 2025/02/22 23:20:35 by etorun           ###   ########.fr       */
+/*   Updated: 2025/02/24 18:37:22 by etorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,12 @@ int		ft_checksorted(int *as);
 void	ft_double_checker(int *as);
 void	ft_error(void);
 char	*get_next_line(int fd);
-void	ft_really(int *as, int *bs);
-void	ft_sure(int *as);
-void	ft_dhandler(int *as, int *bs, const char *cur, int max);
-void	ft_thandler(int *as, int *bs, const char *cur);
-void	ft_rrx(int *xs, int *fs);
-void	ft_rx(int *xs, int *fs);
-void	ft_sx(int *xs, int *fs);
-void	ft_px(int *ss, int *ds, int max);
+void	ft_really(int *as, int *bs, int fail);
+void	ft_sure(int *as, int fail);
+void	ft_dhandler(int *as, int *bs, char *cur, int fail);
+void	ft_thandler(int *as, int *bs, char *cur, int fail);
+void	ft_rrx(int *xs, int fail);
+void	ft_rx(int *xs, int fail);
+void	ft_sx(int *xs, int fail);
+void	ft_px(int *ss, int *ds, int fail);
 #endif

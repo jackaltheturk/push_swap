@@ -1,7 +1,8 @@
 NAME = push_swap
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
-LIBFT = libft.a
+LIBFT = libft/libft.a
+BONUS = checker
 SRC =	src/push_swap.c src/checker_fixer.c \
 src/atoix.c src/check_tools.c \
 src/sorter.c src/moves.c \
@@ -14,18 +15,20 @@ bonus_src/gnl_bonus.c bonus_src/gnl_utils_bonus.c \
 bonus_src/sure_bonus.c bonus_src/moves_bonus.c \
 
 OBJ = $(SRC:.c=.o)
-BONUS_OBJ = ${BONUS_SRC:.c=.o}
+BONUS_OBJ = $(BONUS_SRC:.c=.o)
 	
 $(NAME): $(OBJ) $(LIBFT)
-	$(CC) $(CFLAGS) -o $(NAME) $(OBJ) libft/libft.a
+	$(CC) $(CFLAGS) -o $(NAME) $(OBJ) $(LIBFT)
+
+$(BONUS): $(BONUS_OBJ) $(LIBFT)
+	$(CC) $(CFLAGS) -o $(BONUS) $(BONUS_OBJ) $(LIBFT)
+
+bonus : $(BONUS)
 
 $(LIBFT):
 	make -C libft/
 
-bonus: ${BONUS_OBJ} $(LIBFT)
-	${CC} ${CFLAGS} -o checker ${BONUS_OBJ} libft/libft.a
-
-all: ${NAME} bonus
+all: $(NAME) bonus
 
 clean:
 	rm -f $(OBJ)
