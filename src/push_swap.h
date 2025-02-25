@@ -6,7 +6,7 @@
 /*   By: etorun <etorun@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 13:40:48 by etorun            #+#    #+#             */
-/*   Updated: 2025/02/22 20:14:09 by etorun           ###   ########.fr       */
+/*   Updated: 2025/02/25 18:21:03 by etorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int		ft_atoix(const char *str, char **strhead);
 void	ft_error(void);
 int		*ft_checker_fixer(int argc, char **argv);
 void	ft_free_split(char **split_k);
-int		ft_count(int argc, char **argv);
+int		ft_count(int argc, char **argv, int i, int y);
 int		*ft_fill(int argc, char **argv, int *as, int count);
 int		ft_checksorted(int *as);
 void	ft_double_checker(int *as);

@@ -6,7 +6,7 @@
 /*   By: etorun <etorun@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 13:47:41 by etorun            #+#    #+#             */
-/*   Updated: 2025/02/22 20:42:02 by etorun           ###   ########.fr       */
+/*   Updated: 2025/02/25 18:22:06 by etorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,19 +27,20 @@ void	ft_free_split(char **split_k)
 	free(split_k);
 }
 
-int	ft_count(int argc, char **argv)
+int	ft_count(int argc, char **argv, int i, int y)
 {
-	int		i;
-	int		y;
 	int		count;
 	char	**split_k;
 
-	i = 1;
-	y = 0;
 	count = 0;
 	while (i < argc)
 	{
 		split_k = ft_split(argv[i], ' ');
+		if (!*split_k)
+		{
+			ft_free_split(split_k);
+			ft_error();
+		}
 		while (split_k[y])
 		{
 			ft_atoix(split_k[y], split_k);
@@ -85,6 +86,6 @@ int	*ft_checker_fixer(int argc, char **argv)
 	int	*as;
 
 	as = NULL;
-	count = ft_count(argc, argv);
+	count = ft_count(argc, argv, 1, 0);
 	return (ft_fill(argc, argv, as, count));
 }

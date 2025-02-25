@@ -6,24 +6,21 @@
 /*   By: etorun <etorun@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/22 11:38:21 by etorun            #+#    #+#             */
-/*   Updated: 2025/02/24 17:00:23 by etorun           ###   ########.fr       */
+/*   Updated: 2025/02/25 19:40:36 by etorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <unistd.h>
 
-void	ft_rrx(int *xs, int fail)
+void	ft_rrx(int *xs)
 {
 	int	temp;
 	int	mov;
 	int	i;
 
 	if (xs[0] < 2)
-	{
-		xs[fail] = 1;
 		return ;
-	}
 	i = 1;
 	mov = xs[0];
 	temp = xs[1];
@@ -35,16 +32,13 @@ void	ft_rrx(int *xs, int fail)
 	xs[mov] = temp;
 }
 
-void	ft_rx(int *xs, int fail)
+void	ft_rx(int *xs)
 {
 	int	temp;
 	int	mov;
 
 	if (xs[0] < 2)
-	{
-		xs[fail] = 1;
 		return ;
-	}
 	mov = xs[0];
 	temp = xs[xs[0]];
 	while (mov - 1)
@@ -55,29 +49,23 @@ void	ft_rx(int *xs, int fail)
 	xs[1] = temp;
 }
 
-void	ft_sx(int *xs, int fail)
+void	ft_sx(int *xs)
 {
 	int	temp;
 
 	if (xs[0] < 2)
-	{
-		xs[fail] = 1;
 		return ;
-	}
 	temp = xs[xs[0]];
 	xs[xs[0]] = xs[xs[0] - 1];
 	xs[xs[0] - 1] = temp;
 }
 
-void	ft_px(int *ss, int *ds, int fail)
+void	ft_px(int *ss, int *ds)
 {
-	if (ds[0] != fail - 1 && ss[0] != 0)
+	if (ss[0] != 0)
 		ds[ds[0] + 1] = ss[ss[0]];
 	else
-	{
-		ss[fail] = 1;
 		return ;
-	}
 	ss[0]--;
 	ds[0]++;
 }
