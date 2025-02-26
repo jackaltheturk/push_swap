@@ -6,7 +6,7 @@
 /*   By: etorun <etorun@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/21 20:03:29 by etorun            #+#    #+#             */
-/*   Updated: 2025/02/26 10:23:30 by etorun           ###   ########.fr       */
+/*   Updated: 2025/02/26 15:19:50 by etorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	ft_thandler(int *as, int *bs, char *cur)
 	else if (!ft_strncmp("rrb\n", cur, 4))
 		ft_rrx(bs);
 	else
-		ft_error();
+		ft_errfree(cur, as, bs);
 }
 
 void	ft_dhandler(int *as, int *bs, char *cur)
@@ -54,7 +54,7 @@ void	ft_dhandler(int *as, int *bs, char *cur)
 	else if (!ft_strncmp("pb\n", cur, 3))
 		ft_px(as, bs);
 	else
-		ft_error();
+		ft_errfree(cur, as, bs);
 }
 
 void	ft_really(int *as, int *bs)
@@ -67,7 +67,7 @@ void	ft_really(int *as, int *bs)
 	{
 		len = ft_strlen(cur);
 		if (len > 4 || len == 2)
-			ft_error();
+			ft_errfree(cur, as, bs);
 		else if (len == 4)
 			ft_thandler(as, bs, cur);
 		else if (len == 3)

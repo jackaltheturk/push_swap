@@ -6,7 +6,7 @@
 /*   By: etorun <etorun@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 17:50:19 by etorun            #+#    #+#             */
-/*   Updated: 2025/02/23 15:49:31 by etorun           ###   ########.fr       */
+/*   Updated: 2025/02/26 15:20:03 by etorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,15 @@ int	ft_checksorted(int *as)
 		i++;
 	}
 	return (1);
+}
+
+void	ft_errfree(char *freeme, int *as, int *bs)
+{
+	free(as);
+	free(bs);
+	free(freeme);
+	write (2, "Error\n", 6);
+	exit(1);
 }
 
 void	ft_error(void)
