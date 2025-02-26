@@ -6,7 +6,7 @@
 /*   By: etorun <etorun@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/21 20:03:29 by etorun            #+#    #+#             */
-/*   Updated: 2025/02/25 19:39:55 by etorun           ###   ########.fr       */
+/*   Updated: 2025/02/26 10:23:30 by etorun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,6 @@ void	ft_sure(int *as)
 
 	bs = malloc(sizeof(int) * (as[0] + 1));
 	bs[0] = 0;
-
 	ft_really(as, bs);
 	if (ft_checksorted(as))
 		write (1, "OK\n", 3);
